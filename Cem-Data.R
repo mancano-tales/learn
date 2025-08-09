@@ -1,10 +1,10 @@
 
 library(tidyverse)
-readr::Arquivo-CEM <- read_csv("2025-7-26-Arquivo-CEM.csv")
+readr::Arquivo-CEM <- readr::read_csv("2025-7-26-Arquivo-CEM.csv",n_max=0)
 
-Arquivo_CEM <- read_csv("2025-7-26-Arquivo-CEM.csv")
-View(X2025_7_26_Arquivo_CEM)
+library(censobr)
+install.packages("censo")
 
-colnames(X2025_7_26_Arquivo_CEM)
-
-summarise(X2025_7_26_Arquivo_CEM)
+data_dictionary(2010)
+questionnaire()
+interview_manual()
